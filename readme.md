@@ -31,12 +31,13 @@ This package is useful for educational and experimental purposes in mobile robot
 mr_odom_holo_box/
 ├── launch/
 │   └── joystick.launch.py
+│   └── joystick_wls.launch.py
 ├── joy_pc_server/
 │   └── joystick_server.py
 ├── config/
 │   ├── joystick.yaml
 │   └── twist_mux.yaml
-├── mr_odom_pkg/
+├── mr_odom_holo_box/
 │   ├── __init__.py
 │   ├── mr_odom_node_p1.py
 │   └── mr_odom_node_p1_teleop.py
@@ -48,7 +49,6 @@ mr_odom_holo_box/
 ├── package.xml
 ├── setup.py
 └── setup.cfg
-
 ```
 
 ## Workspace and Package Creation
@@ -76,14 +76,17 @@ source install/setup.bash
 
 ## Usage
 
+### Hard-code Inputs
+
 To run the odometry node:
 
 ```bash
 ros2 run mr_odom_holo_box mr_odom_node_p1
 ```
 
-To run the teleoperation odometry node:
+### Teleoperated Inputs
 
+To run the teleoperation odometry node:
 
 ```bash
 ros2 run mr_odom_holo_box mr_odom_node_p1_teleop
@@ -287,7 +290,7 @@ def odom_tf_broadcaster(self):
 ```
 
 
-## Presentation
+## Author
 
 *Professor*: David Rozo-Osorio, I.M. M.Sc. email: david.rozo31@eia.edu.co
 
